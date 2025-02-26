@@ -1,0 +1,49 @@
+<mat-error *ngIf="generalError" class="alert-danger">
+    {{generalError}}
+  </mat-error>
+  <div *ngIf="isLoading" class="spinner">
+    <p>logging in...</p>
+  </div>
+  
+  <div class="loginForm">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+     <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Enter your email" formControlName="email">
+      <mat-error *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched && !loginForm.get('email')?.getError('emailErr')">
+        A valid email is required
+      </mat-error>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('emailErr')">{{emailError}}</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" [type]="hide ? 'password' : 'text'" placeholder="Enter your password" formControlName="password">
+      <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button" tabindex="-1"><mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched && !loginForm.get('password')?.getError('passwordErr')">
+        Password is required
+      </mat-error>
+      <mat-error *ngIf="loginForm.get('password')?.hasError('passwordErr')">{{passwordError}}</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Confirm Password</mat-label>
+      <input matInput type="password" [type]="hide ? 'password' : 'text'" placeholder="Confirm Password" formControlName="confirmPassword">
+      <button mat-icon-button matSuffix (click)="togglePasswordVisibility()" type="button" tabindex="-1"><mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-error *ngIf="loginForm.get('confirmPassword')?.invalid && loginForm.get('confirmPassword')?.touched && !loginForm.get('confirmPassword')?.hasError('mismatchPasswordsError')">
+       Confirm password is required
+      </mat-error>
+  
+      <mat-error *ngIf="loginForm.get('confirmPassword')?.hasError('mismatchPasswordsError') && loginForm.get('confirmPassword')?.touched">{{mismatchPasswordsError}}</mat-error>
+      
+      
+    </mat-form-field>
+  
+    <button class="loginBtn" mat-raised-button color="primary" type="submit" [disabled]="isLoggingIn" style="background-color: rgb(7, 245, 7);">  {{ isLoggingIn ? 'Logging in...' : 'Log in' }}</button>
+  </form>
+
+  <p class="signup-link">
+    Already have an account? <a [routerLink]="['/registeration']">sign up </a>
+  </p>

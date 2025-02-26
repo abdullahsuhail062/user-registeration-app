@@ -1,0 +1,64 @@
+.signUpForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+form {
+  position: relative;
+    display: flex;
+    flex-direction: column;   /* Stack form elements vertically */
+    width: 300px;             /* Optional: set form width */
+    padding: 20px;
+    background-color: rgb(136, 216, 180);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+
+  .signUpBtn {
+    height: 35px;
+    background-color: darkgray;
+    border-radius: 18px;
+    font-size: 16px;
+    font: bolder;
+    cursor: pointer;
+  }
+
+  .alert-danger {
+    display: flex;
+    position: absolute;
+    margin-left: 44%;
+    margin-top: 60px;
+    color: red;
+    font-size: 12px;
+  }
+
+ /* registration.component.css */
+
+.login-link {
+  cursor: pointer;
+    position: absolute;    
+    margin-top: 35%;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .login-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+
+  .spinner {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+ 

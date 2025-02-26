@@ -1,0 +1,31 @@
+.deletion {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: flex-start; 
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .confirm {
+    background-color: red;
+    width: 100px;
+    height: 40px;
+    color: bisque;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  .dismiss {
+    background-color: rgb(122, 151, 78);
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    color: bisque;
+    margin-bottom: 10px;
+
+  }

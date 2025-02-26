@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <span class="title">User registeration app</span>
+    <span class="spacer"></span>
+    <mat-toolbar color="primary">
+              <span class="spacer"></span>  
+        <!-- Profile Button with Initial -->
+        <button class="todolist-button" mat-button color="primary" (click)="navigateToDoList()">ToDoList</button>
+        <button class="calculator-button" mat-button color="primary" (click)="navigateToCalculator()">calculator</button>
+        <button mat-icon-button (click)="openProfileDialog()" class="profile-button">
+          <span class="profile-initial">{{ profileInitial }}</span>
+        </button>
+      </mat-toolbar>
+      
+  </mat-toolbar>
+  <div *ngIf="showWelcomeMessage" class="welcome-banner">
+    <h2>Welcome to the Dashboard!</h2>
+    <p>We're glad to have you here.</p>
+  </div>
+

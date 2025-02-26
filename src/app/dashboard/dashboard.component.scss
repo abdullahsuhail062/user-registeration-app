@@ -1,0 +1,94 @@
+/* dashboard.component.css */
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+  .profile-button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green; /* Background color */
+    color: #fff; /* Text color (Material primary color) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Center the initial text in the button */
+  .profile-initial {
+    font-size: 16px;
+    color: inherit;
+  }
+  .mat-toolbar {
+    background-color: blueviolet;
+    color: white;
+  }
+
+  
+  .welcome-banner {
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .todolist-button {
+  height: 35px;
+  width: 110px;
+  background-color: rgb(71, 64, 146);
+  border-radius: 4px;
+  margin-right: 50px;
+  font-size: 16px;
+  color: white;
+  font: bolder;
+  cursor: pointer;
+ 
+  }
+
+  .calculator-button {
+    height: 35px;
+    width: 110px;
+    background-color: rgb(64, 146, 105);
+    border-radius: 4px;
+    margin-right: 40px;
+    font-size: 16px;
+    color: white;
+    font: bolder;
+    cursor: pointer;
+   
+    }
+  
+    .home-button {
+      height: 35px;
+      width: 110px;
+      background-color: rgb(53, 84, 108);
+      border-radius: 4px;
+      font-size: 16px;
+      color: white;
+      font: bolder;
+      cursor: pointer;
+     
+      }
+      .input {
+        margin-top: 10%;
+        margin-left: 50%;
+      }
+
+
+  
+  
+  
+
+  
+
+
+
+
+  
+  
