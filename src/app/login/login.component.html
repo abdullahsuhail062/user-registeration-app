@@ -41,7 +41,7 @@
       
     </mat-form-field>
   
-    <button class="loginBtn" mat-raised-button color="primary" type="submit" [disabled]="isLoggingIn" style="background-color: rgb(7, 245, 7);">  {{ isLoggingIn ? 'Logging in...' : 'Log in' }}</button>
+    <button class="loginBtn" mat-raised-button color="primary" type="submit" [disabled]="isValid" [disabled]="isLoggingIn" style="background-color: rgb(7, 245, 7);">  {{ isLoggingIn ? 'Logging in...' : 'Log in' }}</button>
   </form>
 
   <p class="signup-link">
