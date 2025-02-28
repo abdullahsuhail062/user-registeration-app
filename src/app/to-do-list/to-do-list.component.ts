@@ -103,7 +103,9 @@ isTaskExist: boolean= false
       
     },error: (error)=>{this.titleErrorCheckingFn(error);
     }})
-     
+    this.dialogRef.close()
+    this.taskTitleInput = ''
+    this.taskDescriptionInput = ''
 
      }
 
@@ -186,11 +188,6 @@ isTaskExist: boolean= false
       this.dialog.closeAll()
     }
     titleErrorCheckingFn(error:any){
-      if (!error.error.error) {
-        this.dialogRef.close()
-     this.taskTitleInput = ''
-     this.taskDescriptionInput = ''
-      }
       if (error.error.error) {
         this.titleErrorChecking = true
         this.titleError = error.error.error  
