@@ -47,7 +47,7 @@ saveTask(title:any,description: any,taskId:any): Observable<any>{
 
 }
 deleteTask(taskId: any): Observable<any> {
-  return this.http.delete(`${this.apiUrl}/api/deleteTask`,{params:{id:taskId}} 
+  return this.http.delete(`${this.apiUrl}/api/deleteTask`,{params:{title:taskTitle}} 
   );
 }
 
