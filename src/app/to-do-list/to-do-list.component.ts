@@ -165,6 +165,8 @@ isTaskExist: boolean= false
      }
      deleteAccount(index: number, title: string, dialogRef: TemplateRef<any>): void {
       const taskTitle = title
+      console.log(taskTitle);
+      
       
       // Close the dialog immediately
       this.dialog.closeAll();
