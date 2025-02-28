@@ -46,7 +46,7 @@ saveTask(title:any,description: any,taskId:any): Observable<any>{
   return this.http.put(`${this.apiUrl}/api/updateTask`, { description,title,taskId});
 
 }
-deleteTask(taskId: any): Observable<any> {
+deleteTask(taskTitle: any): Observable<any> {
   return this.http.delete(`${this.apiUrl}/api/deleteTask`,{params:{title:taskTitle}} 
   );
 }
@@ -72,4 +72,3 @@ getCompletion(body: string): Observable<any> {
 
 
   
-
