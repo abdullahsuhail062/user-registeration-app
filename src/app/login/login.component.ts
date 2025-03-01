@@ -24,7 +24,6 @@ import { ApiServiceService } from '../api-service.service';
 
 export class LoginComponent {
   hide: boolean = true
-  isInValid: boolean = true
   loginForm: FormGroup
   usernameError: any
   emailError: any
@@ -50,7 +49,6 @@ export class LoginComponent {
    
     this.passwordsMisMatchValidator()
     if (this.loginForm.valid) {
-      this.isInValid = false
       this.toggleSpinner()
       
          this.isLoggingIn =true
