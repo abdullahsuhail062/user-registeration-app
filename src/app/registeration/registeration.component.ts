@@ -63,25 +63,24 @@ export class RegisterationComponent  {
       
         this.authService.saveToken(data.token)
         this.router.navigate(['/dashboard'])};
-    }, error: (error) => {
+    }, error: (error) => { 
+      this.signiUpStatus()
+      this.toggleSpinner()
       
 
       if (error.status===400 && error.error) {
         this.handleError(error.error)}
-        this.signiUpStatus()
-        this.toggleSpinner()
+       
 
 
         if (error.status===401 && error.error) {
           this.handleDatabaseValidationError(error.error)
-          this.signiUpStatus()
-        this.toggleSpinner()  
+         
           
         }
         if (error.status===500) {
           this.generalErrorFn(error.error)
-          this.signiUpStatus()
-        this.toggleSpinner()
+         
           
         }
       
@@ -133,8 +132,7 @@ export class RegisterationComponent  {
       }
       generalErrorFn(error:any){
         this.generalError = error.message
-        this.toggleSpinner()
-        this.signiUpStatus()
+       
 
       }
   
