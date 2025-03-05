@@ -66,12 +66,17 @@ export class LoginComponent {
     
       if (error.status===400 && error.error) {
         this.handleError(error.error)}
+        this.toggleSpinner()
+        this.isLoggingIn = false
+        this.isLoading = false
 
 
       
         if (error.status===500) {
           this.isLoading = false
           this.generalErrorFn(error.error)
+          this.toggleSpinner()
+        this.isLoggingIn = false
           
         
         }
@@ -123,7 +128,7 @@ export class LoginComponent {
       return this.hide= !this.hide
       }
       toggleSpinner(){
-       this.isLoading = true
+       this.isLoading = !this.isLoading
          
     
 
