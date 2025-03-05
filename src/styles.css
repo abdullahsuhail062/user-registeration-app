@@ -22,4 +22,14 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  
+  @media (max-width: 768px) {
+    .element {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  .element {
+    width: 90%;
+    max-width: 400px; /* Prevents elements from getting too large */
+  }
+      
