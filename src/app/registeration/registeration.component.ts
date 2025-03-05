@@ -68,16 +68,20 @@ export class RegisterationComponent  {
 
       if (error.status===400 && error.error) {
         this.handleError(error.error)}
+        this.signiUpStatus()
+        this.toggleSpinner()
 
 
         if (error.status===401 && error.error) {
           this.handleDatabaseValidationError(error.error)
-          
+          this.signiUpStatus()
+        this.toggleSpinner()  
           
         }
         if (error.status===500) {
           this.generalErrorFn(error.error)
-          
+          this.signiUpStatus()
+        this.toggleSpinner()
           
         }
       
@@ -129,6 +133,8 @@ export class RegisterationComponent  {
       }
       generalErrorFn(error:any){
         this.generalError = error.message
+        this.toggleSpinner()
+        this.signiUpStatus()
 
       }
   
@@ -144,7 +150,7 @@ export class RegisterationComponent  {
       }
 
       toggleSpinner() {
-        this.isLoading = true
+        this.isLoading = !this.isLoading
       }
 
       signiUpStatus(){
