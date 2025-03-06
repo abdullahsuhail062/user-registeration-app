@@ -1,5 +1,6 @@
 .loginForm {
     display: flex;
+    flex-direction: column;   /* Stack form elements vertically */
     justify-content: center;
     align-items: center;
     height: 100vh;
