@@ -71,7 +71,7 @@
     background: linear-gradient(45deg, #ff4081, #f50057); /* Gradient for a modern look */
     color: #ffffff; /* White text */
     font-weight: bold;
-    margin-left: 0.1em;
+    margin-left: 0.5em;
     font-size: 14px; /* Reduced font size */
     text-transform: capitalize; /* Makes text more natural */
     border-radius: 20px; /* Smaller rounded corners */
@@ -85,7 +85,7 @@
 
   }
   .navigate {
-    margin-left: 50em;
+    margin-left: 10em;
     background-color: darkcyan;
     color: white;
     width: 80px;
@@ -304,14 +304,4 @@
 
 }
 
-navigate {
-  height: 35px;
-  width: 110px;
-  background-color: rgb(146, 117, 64);
-  border-radius: 4px;
-  font-size: 16px;
-  color: white;
-  font: bolder;
-  cursor: pointer;
- 
-  }
+
