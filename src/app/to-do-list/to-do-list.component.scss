@@ -85,7 +85,7 @@
 
   }
   .navigate {
-    margin-left: calc(40% - 40vw);
+    margin-left: min(40%, 40vw);
     background-color: rgb(0, 30, 139);
     color: white;
     width: 100px;
