@@ -19,7 +19,7 @@
 
 .mat-toolbar {
   color: blue;
-  width: 100%;
+  width: 100em;
   flex-shrink: 0; /* Prevent the toolbar from shrinking */
   display: flex;
   position: fixed; /* Fixed at the top */
@@ -71,7 +71,7 @@
     background: linear-gradient(45deg, #ff4081, #f50057); /* Gradient for a modern look */
     color: #ffffff; /* White text */
     font-weight: bold;
-    margin-left: 10em;
+    margin-left: 100em;
     font-size: 14px; /* Reduced font size */
     text-transform: capitalize; /* Makes text more natural */
     border-radius: 20px; /* Smaller rounded corners */
