@@ -71,7 +71,7 @@
     background: linear-gradient(45deg, #ff4081, #f50057); /* Gradient for a modern look */
     color: #ffffff; /* White text */
     font-weight: bold;
-    margin-left: 1em;
+    margin-left: calc(100% - 1vw); /* Ensures margin adapts based on screen size */
     font-size: 14px; /* Reduced font size */
     text-transform: capitalize; /* Makes text more natural */
     border-radius: 20px; /* Smaller rounded corners */
@@ -85,7 +85,7 @@
 
   }
   .navigate {
-    margin-left: 65em;
+    margin-left: calc(65% -65vw)
     background-color: rgb(0, 30, 139);
     color: white;
     width: 100px;
