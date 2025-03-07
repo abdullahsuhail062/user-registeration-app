@@ -43,11 +43,11 @@ form {
     cursor: pointer;    
     margin-top: 35em;
     font-size: 14px;
-    user-select: none;
     text-align: center;
   }
   
   .signup-link a {
+    user-select: none;
     cursor: pointer;
     color: #007bff;
     text-decoration: none;
