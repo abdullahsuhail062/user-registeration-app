@@ -86,7 +86,7 @@
   }
   .navigate {
     margin-left: 65em;
-    background-color: darkcyan;
+    background-color: rgb(0, 30, 139);
     color: white;
     width: 100px;
     height: 35px;
@@ -305,3 +305,8 @@
 }
 
 
+@media (max-width: 600px) {
+  .mat-toolbar {
+    width: 100%; /* More space on smaller screens */
+  }
+}  
