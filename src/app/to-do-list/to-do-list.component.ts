@@ -135,11 +135,11 @@ isTaskExist: boolean= false
 
 
      }
-     onTaskChange(task:any){
+     onTaskChange(task:any,title: string){
       this.task = task
       const taskCompleleted =true
-      const taskId = this.authService.getTaskId()
-      this.apiService.taskCompeletion(taskCompleleted,taskId).subscribe({next:(data)=>{console.log(data);
+      const taskTitle = title
+      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{console.log(data);
       },error:(error)=>{this.handleError(error)}})
      }
 
