@@ -50,8 +50,6 @@ isTaskExist: boolean= false
       this.isLoadingStatus()
     } else {
       this.items = [tasks];
-      this.isTaskExistStatus();
-      this.isLoadingStatus()
       // Wrap the single task object in an array
     }
 
