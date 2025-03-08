@@ -139,7 +139,7 @@ isTaskExist: boolean= false
       this.task = task      
       const taskCompleleted =true
       const taskTitle = title      
-      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{this.task =data.success; console.log(data);
+      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{this.task =data;
       
       
       },error:(error)=>{this.handleError(error)}})
