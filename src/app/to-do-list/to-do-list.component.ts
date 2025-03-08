@@ -136,12 +136,12 @@ isTaskExist: boolean= false
 
      }
      onTaskChange(task:any,title: string){
-      this.task = task
       console.log(this.task);
       
       const taskCompleleted =true
       const taskTitle = title      
-      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{this.task = data.success
+      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{this.task = data.success;console.log(this.task);
+      
       },error:(error)=>{this.handleError(error)}})
      }
 
