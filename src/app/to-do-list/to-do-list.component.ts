@@ -148,10 +148,7 @@ isTaskExist: boolean= false
 
           
      isLoadingStatus(){
-      if (this.isLoading===true) {
-        this.isLoading=false
-        
-      }
+      this.isLoading = !this.isLoading
      }
      isTaskExistStatus() {
       if (this.items.length === 0) { 
