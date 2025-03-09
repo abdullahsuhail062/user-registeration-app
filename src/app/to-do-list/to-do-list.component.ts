@@ -47,6 +47,7 @@ isTaskExist: boolean= false
       if (tasks !==null && tasks !==undefined) {
         this.items = tasks
     //this.isLoadingStatus()
+    this.isLoading = false
     this.isTaskExistStatus()    
       }
 
