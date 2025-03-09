@@ -37,6 +37,7 @@ isDeactive: boolean = true
 isActive: boolean = false
 items: { title: string; description: string, isEditing: boolean,completed: boolean }[] =[]
 dialogRef: any
+convertObj: any
 listItem:any
 taskId: any
 isLoading: boolean =true
@@ -46,7 +47,8 @@ isTaskExist: boolean= false
   const token =this.authService.getToken()
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
       if (tasks) { // Ensure it's an array
-        this.items = [tasks];
+        this.convertObj = Object.values(tasks)
+        this.items = this.convertObj
         this.isLoadingStatus()
       } if (!tasks){
         this.items = []; // Assign empty array if tasks is null/undefined
