@@ -45,9 +45,7 @@ isTaskExist: boolean= false
   const token =this.authService.getToken()
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
       if (tasks) {
-        //this.items = tasks
-        console.log(tasks);
-        
+        this.items = Object.values(tasks)
         this.isLoadingStatus()
       } if (!tasks){
         this.isLoadingStatus()
