@@ -29,7 +29,7 @@ titleError: string = ''
 isDisabled: boolean = true 
 isEditing: boolean = false
 title:any
-task:boolean =false
+isChecked:boolean =false
 description:any
 taskTitleInput: string = ''
 taskDescriptionInput: string = ''
@@ -37,7 +37,6 @@ isDeactive: boolean = true
 isActive: boolean = false
 items: { title: string; description: string, isEditing: boolean,task: boolean }[] =[]
 dialogRef: any
-convertObj: any
 listItem:any
 taskId: any
 isLoading: boolean =true
@@ -140,11 +139,12 @@ isTaskExist: boolean= false
 
 
      }
-     onTaskChange(task:any,title: string){
-      this.task = task      
-      const taskCompleleted =true
+     onTaskChange(event:Event,title: string){
+      const checked = (event.target as HTMLInputElement).checked;
+      this.isChecked = checked
+      
       const taskTitle = title      
-      this.apiService.taskCompeletion(taskCompleleted,taskTitle).subscribe({next:(data)=>{this.task =data.success;
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{this.isChecked =data.success;
       
       
       },error:(error)=>{this.handleError(error)}})
