@@ -45,8 +45,8 @@ isTaskExist: boolean= false
  ngOnInit(): void {
   const token =this.authService.getToken()
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
-      if (tasks && Array.isArray(tasks)) { // Ensure it's an array
-        this.items = tasks;
+      if (tasks) { // Ensure it's an array
+        this.items = [tasks];
         this.isLoadingStatus()
       } if (!tasks){
         this.items = []; // Assign empty array if tasks is null/undefined
