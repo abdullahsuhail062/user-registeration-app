@@ -49,6 +49,7 @@ isTaskExist: boolean= false
       if (tasks) { 
       this.items = tasks
         this.isLoadingStatus()
+        this.isTaskExistStatus()
       } if (!tasks){
         this.items = []; // Assign empty array if tasks is null/undefined
         this.isLoadingStatus()
