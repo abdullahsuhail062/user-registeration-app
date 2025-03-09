@@ -44,7 +44,8 @@ isTaskExist: boolean= false
   constructor(private cdr: ChangeDetectorRef,private router: Router,private authService: AuthService,private dialog: MatDialog, private apiService: ApiServiceService ){}
  ngOnInit(): void {
   const token =this.authService.getToken()
-    this.apiService.getTasks(token).subscribe({next:(tasks)=>{
+    this.apiService.getTasks(token).subscribe({next:(tasks)=>{console.log(tasks);
+    
       if (tasks) { 
       this.items = tasks
       this.isChecked =tasks.completed
