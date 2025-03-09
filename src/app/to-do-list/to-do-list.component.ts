@@ -12,6 +12,7 @@ import { AuthService } from '../auth.service';
 import { error } from 'node:console';
 import { Route } from '@angular/router';
 import { Router, RouterLink } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 
  
@@ -40,13 +41,14 @@ listItem:any
 taskId: any
 isLoading: boolean =true
 isTaskExist: boolean= false
-  constructor(private router: Router,private authService: AuthService,private dialog: MatDialog, private apiService: ApiServiceService ){}
+  constructor(private cdr: ChangeDetectorRef,private router: Router,private authService: AuthService,private dialog: MatDialog, private apiService: ApiServiceService ){}
  ngOnInit(): void {
   const token =this.authService.getToken()
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
       if (tasks) {
-        this.items = Object.values(tasks)
+        this.items =tasks
         this.isLoadingStatus()
+        this.cdr.detectChanges()
       } if (!tasks){
         this.isLoadingStatus()
         this.isTaskExistStatus()    
