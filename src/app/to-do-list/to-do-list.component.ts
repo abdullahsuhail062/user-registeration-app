@@ -35,7 +35,7 @@ taskTitleInput: string = ''
 taskDescriptionInput: string = ''
 isDeactive: boolean = true
 isActive: boolean = false
-items: { title: string; description: string, isEditing: boolean,completed: boolean }[] =[]
+items: { title: string; description: string, isEditing: boolean,task: boolean }[] =[]
 dialogRef: any
 convertObj: any
 listItem:any
@@ -100,7 +100,7 @@ isTaskExist: boolean= false
       
       
     
-      this.items.push({title: item.title,description: item.description, isEditing: false, completed:false});this.isTaskExistStatus(); 
+      this.items.push({title: item.title,description: item.description, isEditing: false, task:false});this.isTaskExistStatus(); 
       //this.items.unshift(item)
       localStorage.setItem('taskId',item.id);
       console.log(item.id);
