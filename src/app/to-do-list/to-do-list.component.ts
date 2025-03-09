@@ -48,8 +48,7 @@ isTaskExist: boolean= false
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
       if (tasks) { console.log(tasks);
       
-        this.convertObj = Object.values(tasks)
-        this.items = this.convertObj
+        this.items = [tasks]
         this.isLoadingStatus()
       } if (!tasks){
         this.items = []; // Assign empty array if tasks is null/undefined
