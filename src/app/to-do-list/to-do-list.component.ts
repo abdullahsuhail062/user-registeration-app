@@ -46,9 +46,10 @@ isTaskExist: boolean= false
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
       if (tasks !==null && tasks !==undefined) {
         this.items = tasks
-    //this.isLoadingStatus()
-    this.isLoading = false
-    this.isTaskExistStatus()    
+      } if (tasks ===null || tasks ===undefined){
+        this.isLoadingStatus()
+        this.isTaskExistStatus()    
+
       }
 
     
