@@ -48,21 +48,14 @@ isTaskExist: boolean= false
       if (tasks && Array.isArray(tasks)) { // Ensure it's an array
         this.items = tasks;
         this.isLoadingStatus()
-      } else {
+      } if (!tasks){
         this.items = []; // Assign empty array if tasks is null/undefined
         this.isLoadingStatus()
         this.isTaskExistStatus()
       }
-      
-      
       this.cdr.detectChanges();
-    
-    
-    
-
-    
-
-    },error:(
+    },
+    error:(
       error)=>{this.handleTaskFetchingError(error)}})
   
  }
