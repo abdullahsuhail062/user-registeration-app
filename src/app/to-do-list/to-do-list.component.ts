@@ -46,7 +46,8 @@ isTaskExist: boolean= false
  ngOnInit(): void {
   const token =this.authService.getToken()
     this.apiService.getTasks(token).subscribe({next:(tasks)=>{
-      if (tasks) { // Ensure it's an array
+      if (tasks) { console.log(tasks);
+      
         this.convertObj = Object.values(tasks)
         this.items = this.convertObj
         this.isLoadingStatus()
