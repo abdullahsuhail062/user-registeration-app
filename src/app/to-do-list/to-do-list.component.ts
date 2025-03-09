@@ -48,7 +48,7 @@ isTaskExist: boolean= false
       if (tasks) { 
       this.items = tasks
       this.isChecked =tasks.completed
-      console.log(this.isChecked);
+      console.log(this.isChecked,tasks.completed);
       
         this.isLoadingStatus()
         this.isTaskExistStatus()
