@@ -43,7 +43,7 @@ isTaskExist: boolean= false
   constructor(private router: Router,private authService: AuthService,private dialog: MatDialog, private apiService: ApiServiceService ){}
  ngOnInit(): void {
   const token =this.authService.getToken()
-    // this.apiService.getTasks(token).subscribe({next:(tasks)=>{console.log(tasks);
+    this.apiService.getTasks(token).subscribe({next:(tasks)=>{console.log(tasks);
     //  if (Array.isArray(tasks)) {
     //   this.items = tasks;
     //   this.isTaskExistStatus();
@@ -53,8 +53,8 @@ isTaskExist: boolean= false
     //   // Wrap the single task object in an array
     // }
 
-    // },error:(
-    //   error)=>{this.handleTaskFetchingError(error)}})
+    },error:(
+      error)=>{this.handleTaskFetchingError(error)}})
   
  }
  handleTaskFetchingError(error: any){
