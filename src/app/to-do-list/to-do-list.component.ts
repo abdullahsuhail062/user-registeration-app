@@ -49,7 +49,7 @@ isTaskExist: boolean= false
       if (tasks) { 
       this.items = tasks
       const objVal = Object.values(tasks)
-      console.log(objVal);
+      console.log('extracted values',objVal);
       
       
       
