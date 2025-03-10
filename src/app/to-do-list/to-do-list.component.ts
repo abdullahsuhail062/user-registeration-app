@@ -48,10 +48,7 @@ isTaskExist: boolean= false
     
       if (tasks) { 
       this.items = tasks
-      
-      
-      
-      
+      this.isChecked = tasks.completed
         this.isLoadingStatus()
         this.isTaskExistStatus()
       } if (!tasks){
@@ -148,11 +145,7 @@ isTaskExist: boolean= false
       
       this.isChecked = !this.isChecked    
       const taskTitle = title      
-      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{
-      
-      
-      
-      },error:(error)=>{this.handleError(error)}})
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{},error:(error)=>{this.handleError(error)}})
      }
 
           
