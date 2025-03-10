@@ -25,7 +25,7 @@
               <span class="task-name">{{ item.title }}</span></div>
              <div class="task-actions"> <button class="edit-btn" mat-button color="primary" (click)="editItem(i)">Edit</button>
               <button class="delete-btn" mat-button color="warn" (click)="deleteItem(dialogTemplateDeletion)">Delete</button>
-              <input type="checkbox" [checked]="isChecked" (change)="onTaskChange(event,item.title)" />
+              <input type="checkbox" [checked]="isChecked" (change)="onTaskChange($event,item.title)" />
             </div>
             <div class="confirm-deletion-dialog">
               <ng-template #dialogTemplateDeletion>

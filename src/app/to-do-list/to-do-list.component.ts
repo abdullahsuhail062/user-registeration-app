@@ -29,8 +29,7 @@ titleError: string = ''
 isDisabled: boolean = true 
 isEditing: boolean = false
 title:any
-event:boolean=false
-isChecked:boolean =false
+isChecked:boolean=false
 description:any
 taskTitleInput: string = ''
 taskDescriptionInput: string = ''
@@ -137,10 +136,11 @@ isTaskExist: boolean= false
 
 
      }
-     onTaskChange(event:boolean,title: string){
-      this.event = event
+     onTaskChange(event:Event,title: string){
+      const checked = (event.target as HTMLInputElement).checked;
+      this.isChecked = checked
       const taskTitle = title      
-      this.apiService.taskCompeletion(this.event,taskTitle).subscribe({next:(data)=>{console.log(data);
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{console.log(data);
       
       },error:(error)=>{this.handleError(error)}})
      }
