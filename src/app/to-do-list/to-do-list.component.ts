@@ -96,7 +96,7 @@ isTaskExist: boolean= false
 
   onCreateList(){
     const token = this.authService.getToken()
-    this.apiService.addTask(this.taskTitleInput,this.taskDescriptionInput,token).subscribe({next: (item)=>{console.log(item);
+    this.apiService.addTask(this.taskTitleInput,this.taskDescriptionInput,token).subscribe({next: (item)=>{
       this.items.push({title: item.title,description: item.description, isEditing: false, completed: item.completed});this.isTaskExistStatus();       
       localStorage.setItem('taskId',item.id);
       console.log(item.id);
@@ -138,11 +138,9 @@ isTaskExist: boolean= false
      }
      onTaskChange(event:Event,title: string){
       const checked = (event.target as HTMLInputElement).checked;
-      this.isChecked = checked
-      console.log(this.isChecked);
-            
+      this.isChecked = checked        
       const taskTitle = title      
-      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{console.log(data);
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{
       },error:(error)=>{this.handleError(error)}})
      }
 
