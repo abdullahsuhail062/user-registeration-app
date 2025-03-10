@@ -101,7 +101,8 @@ isTaskExist: boolean= false
       
     
       this.items.push({title: item.title,description: item.description, isEditing: false, completed: item.completed});this.isTaskExistStatus(); 
-      //this.items.unshift(item)
+      console.log(this.items,item);
+      
       localStorage.setItem('taskId',item.id);
       console.log(item.id);
       
