@@ -137,8 +137,8 @@ isTaskExist: boolean= false
 
      }
      onTaskChange(event:Event,title: string){
-      const checked = (event.target as HTMLInputElement).checked;
-      this.isChecked = checked        
+      //const checked = (event.target as HTMLInputElement).checked;
+      //this.isChecked = checked        
       const taskTitle = title      
       this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{
       },error:(error)=>{this.handleError(error)}})
