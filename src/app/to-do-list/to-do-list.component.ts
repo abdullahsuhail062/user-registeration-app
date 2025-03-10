@@ -140,7 +140,8 @@ isTaskExist: boolean= false
       
       this.isChecked = !this.isChecked    
       const taskTitle = title      
-      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{},error:(error)=>{this.handleError(error)}})
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{console.log(data);
+      },error:(error)=>{this.handleError(error)}})
      }
 
           
