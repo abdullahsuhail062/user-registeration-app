@@ -134,7 +134,7 @@ isTaskExist: boolean= false
       this.items[index].isEditing = false;
       const taskId =this.authService.getTaskId()
       this.apiService.saveTask(title,description,taskId
-      ).subscribe({next:(update)=>{console.log(update);
+      ).subscribe({next:(update)=>{
       },error:(error)=>{this.handleError(error)}})
 
      }
@@ -146,10 +146,10 @@ isTaskExist: boolean= false
      }
      onTaskChange(event:Event,title: string){
       const checked = (event.target as HTMLInputElement).checked;
-      this.isChecked = checked
-      
+      this.isChecked = checked    
       const taskTitle = title      
-      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{this.isChecked =data.success;
+      this.apiService.taskCompeletion(this.isChecked,taskTitle).subscribe({next:(data)=>{console.log(data);
+      
       
       
       },error:(error)=>{this.handleError(error)}})
